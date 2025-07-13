@@ -1,0 +1,48 @@
+name: CI/CD Pipeline
+
+
+
+on:
+ push:
+   branches: [ "main" ]
+
+
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+
+
+
+   steps:
+   - name: Checkout Repo
+     uses: actions/checkout@v3
+
+
+
+   - name: Set up Docker
+     uses: docker/setup-buildx-action@v3
+
+
+
+   - name: Build Docker image for Web Server
+     run: |
+       cd Web-Serber
+       docker build -t web-server .
+
+
+   - name: Run Unit Test (optional step)
+     run: echo "Testing done (placeholder)"
+
+
+
+   - name: Login to Docker Hub
+     run: |
+       echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+
+   - name: Tag & Push Docker Image
+     run: |
+       docker tag web-server ${{ secrets.DOCKER_USERNAME }}/web-server
+       docker push ${{ secrets.DOCKER_USERNAME }}/web-server
+

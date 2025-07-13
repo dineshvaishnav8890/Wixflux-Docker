@@ -27,7 +27,7 @@ jobs:
 
    - name: Build Docker image for Web Server
      run: |
-       cd Web-Serber
+       
        docker build -t web-server .
 
 

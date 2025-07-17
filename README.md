@@ -2,7 +2,7 @@
 
 Welcome to **Wixflux-Docker** – a lightweight and responsive static website containerized with Docker, styled with CSS, and powered by GitHub Actions for seamless CI/CD.
 
-![Screenshot](./ScreenShoot/homepage.png)
+![Screenshot](./ScreenShoot/Action-file.png)
 
 ---
 

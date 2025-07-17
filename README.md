@@ -38,7 +38,7 @@ Welcome to **Wixflux-Docker** – a lightweight and responsive static website co
 
 | Homepage |
 |----------|
-| ![Home](./ScreenShoot/homepage.png) |
+| ![Home](./ScreenShoot/Docker-Con-Data.png) |
 
 ---
 
